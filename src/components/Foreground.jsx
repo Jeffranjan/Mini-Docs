@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Card from "./Card";
 
 function Foreground() {
-  const ref = userRef(null);
+  const ref = useRef(null);
   const data = [
     {
       desc: "Hey there!, This is Ranjan Gupta and I made this cool looking docs web app",
@@ -11,13 +11,13 @@ function Foreground() {
       tag: { isOpen: true, tagTitle: "Download Now", tagColor: "green" },
     },
     {
-      desc: "Hey there!, This is Ranjan Gupta and I made this cool looking docs web app",
+      desc: "I've added cool animations to in this project using Framer Motion",
       filesize: "0.9Mb",
       close: false,
       tag: { isOpen: true, tagTitle: "Download Now", tagColor: "blue" },
     },
     {
-      desc: "Hey there!, This is Ranjan Gupta and I made this cool looking docs web app",
+      desc: "Feel free to drag around the cards to see the animations",
       filesize: "0.9Mb",
       close: true,
       tag: { isOpen: false, tagTitle: "Upload", tagColor: "green" },
