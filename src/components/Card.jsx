@@ -5,6 +5,9 @@ import { IoCloseSharp } from "react-icons/io5";
 import { motion } from "framer-motion";
 
 function Card({ data, reference }) {
+  const handleDownload = () => {
+    alert("Server is down");
+  };
   return (
     <motion.div
       drag
@@ -25,7 +28,9 @@ function Card({ data, reference }) {
             {data.close ? (
               <IoCloseSharp />
             ) : (
-              <LuDownload size="0.7em" color="#fff" />
+              <button onClick={handleDownload}>
+                <LuDownload size="0.7em" color="#fff" />
+              </button>
             )}
           </span>
         </div>
@@ -35,7 +40,9 @@ function Card({ data, reference }) {
               data.tag.tagColor === "blue" ? "bg-blue-600" : "bg-green-600"
             } flex items-center justify-center`}
           >
-            <h3 className="text-sm font-semibold">{data.tag.tagTitle}</h3>
+            <button onClick={handleDownload} className="text-sm font-semibold">
+              {data.tag.tagTitle}
+            </button>
           </div>
         )}
       </div>
