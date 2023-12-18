@@ -11,7 +11,7 @@ function Foreground() {
       tag: { isOpen: true, tagTitle: "Download Now", tagColor: "green" },
     },
     {
-      desc: "I've added cool animations to in this project using Framer Motion",
+      desc: "I've added cool animations in this project using Framer Motion",
       filesize: "0.9Mb",
       close: false,
       tag: { isOpen: true, tagTitle: "Download Now", tagColor: "blue" },
