@@ -28,9 +28,12 @@ function Card({ data, reference }) {
             {data.close ? (
               <IoCloseSharp />
             ) : (
-              <button onClick={handleDownload}>
+              <motion.bdibutton
+                whileTap={{ scale: 0.8 }}
+                onClick={handleDownload}
+              >
                 <LuDownload size="0.7em" color="#fff" />
-              </button>
+              </motion.bdibutton>
             )}
           </span>
         </div>
@@ -40,9 +43,13 @@ function Card({ data, reference }) {
               data.tag.tagColor === "blue" ? "bg-blue-600" : "bg-green-600"
             } flex items-center justify-center`}
           >
-            <button onClick={handleDownload} className="text-sm font-semibold">
+            <motion.button
+              whileTap={{ scale: 0.8 }}
+              onClick={handleDownload}
+              className="text-sm font-semibold"
+            >
               {data.tag.tagTitle}
-            </button>
+            </motion.button>
           </div>
         )}
       </div>
